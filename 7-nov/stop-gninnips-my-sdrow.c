@@ -6,6 +6,8 @@ void spin_words(const char *sentence, char *result);
 int main()
 {
     const char sentence[] = "Hey wollef sroirraw";
+    // printf("%ld\n", strlen(sentence));
+    // strlen only return length of the string excluding the null pointer
     char result[strlen(sentence) + 1];  // Allocate with space for the null terminator
     spin_words(sentence, result);
     printf("%s\n", result);

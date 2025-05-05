@@ -30,8 +30,11 @@ char *disemvowel(const char *str)
         len += 1;
     } 
     
-    // calloc returns void so need to type cast it 
-    char* new_string = (char*)calloc(len + 1, sizeof(*str));
+    // calloc returns void so need to type cast it
+    // calloc allocates memory dynamically
+    // calloc need two input, first is number of elements to allocate, second is size of each element
+    // len + 1, because need one extra space for \0, and sizeof(*str) *str is first element so size of that
+    char *new_string = (char*)calloc(len + 1, sizeof(*str));
 
     int new_count = 0;
     for (int count = 0; str[count] != '\0'; count++) {

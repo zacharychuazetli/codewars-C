@@ -16,6 +16,8 @@ int main()
 
 size_t get_count(const char *s)
 {
+    // ptr is a pointer pointing to a char, and the character pointed by ptr is constant
+    // can also just directly use s
     const char *ptr = s;
     size_t num_vowels = 0;
     while (*ptr != '\0'){
